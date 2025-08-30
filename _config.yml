@@ -2,8 +2,8 @@
 remote_theme: epidrome/cover-card@main
 
 # Title and tag line
-title: 'Вин Чун'
-description: 'Приходите на занятия по единоборству Вин Чун во Всеволожске, записаться можно по ссылкам ниже'
+title: 'Bobry Country Houses'
+description: 'Подписывайтесь на наши соц сети, чтобы быть в курсе'
 
 # Images
 avatar: 'avatar.jpg'
@@ -15,7 +15,7 @@ favicon: 'logoweb.png'
 #facebook: 'myfacebook'
 #twitter: 'mytwitter'
 #linkedin: 'mylinkedin'
-instagram: 'wing_chun_vsevolozhsk'
+instagram: 'bobry_country_houses'
 #pinterest: 'mypinterest'
 #youtube: 'myyoutube'
 #github-user: 'mygithub'
@@ -30,14 +30,14 @@ instagram: 'wing_chun_vsevolozhsk'
 #medium:  ''
 #tumblr: 'mytumblr'
 #weibo: 'myweibo'
-vk: 'vsevwingchun'
-telegram: 'Ilya_Manik'
-whatsapp: '79657776696'
+vk: 'bobryhouses'
+telegram: 'bobryhouses'
+whatsapp: '79214060607'
 #blog_url: 'myblog.blog.com'
 #email: 'hello@example.com'
 #messenger: 'myfbchat'
 website: ''
-phone: '+79657776696'
+phone: '+79214060607'
 
 social-links-order: [instagram, telegram, vk, whatsapp, website, phone]
 
@@ -158,7 +158,7 @@ social-links:
     icon-class: fas fa-2x fa-blog
 
   - name: website
-    url-pattern: www.wingchunspb.ru/__USERNAME__
+    url-pattern: www.bobryhouses.ru/__USERNAME__
     icon-class: fa fa-2x fa-chrome
     
   - name: email
