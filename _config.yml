@@ -37,9 +37,10 @@ whatsapp: '79214060607'
 #email: 'hello@example.com'
 #messenger: 'myfbchat'
 website: ''
+rules: ''
 phone: '+79214060607'
 
-social-links-order: [instagram, telegram, vk, whatsapp, website, phone]
+social-links-order: [instagram, telegram, vk, whatsapp, website, rules, phone]
 
 # Yaml manifest of supported social links
 # Requirements:
@@ -160,6 +161,10 @@ social-links:
   - name: website
     url-pattern: www.bobryhouses.ru/__USERNAME__
     icon-class: fa fa-2x fa-chrome
+
+      - name: rules
+    url-pattern: www.bobryhouses.ru/rules/__USERNAME__
+    icon-class: fa fa-2x fa-house-user
     
   - name: email
     url-scheme: 'mailto:'
