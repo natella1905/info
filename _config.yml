@@ -162,7 +162,7 @@ social-links:
     url-pattern: www.bobryhouses.ru/__USERNAME__
     icon-class: fa fa-2x fa-chrome
 
-      - name: rules
+  - name: rules
     url-pattern: www.bobryhouses.ru/rules/__USERNAME__
     icon-class: fa fa-2x fa-house-user
     
