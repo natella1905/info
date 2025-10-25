@@ -170,7 +170,7 @@ social-links:
 
   - name: отзывы
     url-pattern: yandex.ru/maps/org/bobry_country_houses/__USERNAME__
-    icon-class: fas fa-comments
+    icon-class: fas fa-2x fa-comments
     
   - name: email
     url-scheme: 'mailto:'
@@ -184,4 +184,4 @@ social-links:
 
   - name: забронировать
     url-pattern: homereserve.ru/__USERNAME__
-    icon-class: fas fa-calendar-alt
+    icon-class: fas fa-2x fa-calendar-alt
