@@ -37,7 +37,8 @@ whatsapp: '79214060607'
 #email: 'hello@example.com'
 #messenger: 'myfbchat'
 website: ''
-rules: 'rules'
+rules: 'правила проживания'
+yandex: ''
 phone: '+79214060607'
 
 social-links-order: [instagram, telegram, vk, whatsapp, website, rules, phone]
@@ -164,6 +165,10 @@ social-links:
 
   - name: rules
     url-pattern: www.bobryhouses.ru/__USERNAME__
+    icon-class: fa fa-2x fa-house-user
+
+  - name: yandex
+    url-pattern: yandex.ru/maps/org/bobry_country_houses/169139949040/reviews/__USERNAME__
     icon-class: fa fa-2x fa-house-user
     
   - name: email
