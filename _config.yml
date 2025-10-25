@@ -170,7 +170,7 @@ social-links:
 
   - name: отзывы
     url-pattern: yandex.ru/maps/org/bobry_country_houses/__USERNAME__
-    icon-class: fab fa-yandex
+    icon-class: <i class="fa-solid fa-comments"></i>
     
   - name: email
     url-scheme: 'mailto:'
