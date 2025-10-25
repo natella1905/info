@@ -37,11 +37,11 @@ whatsapp: '79214060607'
 #email: 'hello@example.com'
 #messenger: 'myfbchat'
 website: ''
-rules: 'Правила проживания'
-yandex: ''
+Правила проживания: 'rules'
+Оставить отзыв: 'yandex'
 phone: '+79214060607'
 
-social-links-order: [instagram, telegram, vk, whatsapp, website, rules, phone]
+social-links-order: [instagram, telegram, vk, whatsapp, website, Правила проживания, Оставить отзыв, phone]
 
 # Yaml manifest of supported social links
 # Requirements:
@@ -163,7 +163,7 @@ social-links:
     url-pattern: www.bobryhouses.ru/__USERNAME__
     icon-class: fa fa-2x fa-chrome
 
-  - name: Правила проживания
+  - name: rules
     url-pattern: www.bobryhouses.ru/__USERNAME__
     icon-class: fa fa-2x fa-house-user
 
