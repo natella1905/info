@@ -37,7 +37,7 @@ whatsapp: '79214060607'
 #email: 'hello@example.com'
 #messenger: 'myfbchat'
 website: ''
-rules: 'правила проживания'
+rules: 'Правила проживания'
 yandex: ''
 phone: '+79214060607'
 
@@ -163,7 +163,7 @@ social-links:
     url-pattern: www.bobryhouses.ru/__USERNAME__
     icon-class: fa fa-2x fa-chrome
 
-  - name: rules
+  - name: Правила проживания
     url-pattern: www.bobryhouses.ru/__USERNAME__
     icon-class: fa fa-2x fa-house-user
 
