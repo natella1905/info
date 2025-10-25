@@ -37,11 +37,12 @@ whatsapp: '79214060607'
 #email: 'hello@example.com'
 #messenger: 'myfbchat'
 website: ''
-правила проживания: 'правила проживания'
-yandex: '169139949040/reviews'
-phone: '+79214060607'
+проживание: 'проживание'
+отзывы: '169139949040/reviews'
+позвонить: '+79214060607'
+забронировать: 'gDleLbdhMC'
 
-social-links-order: [instagram, telegram, vk, whatsapp, website, правила проживания, yandex, phone]
+social-links-order: [website, отзывы, whatsapp, telegram, vk, instagram, проживание, позвонить, забронировать]
 
 # Yaml manifest of supported social links
 # Requirements:
@@ -163,11 +164,11 @@ social-links:
     url-pattern: www.bobryhouses.ru/__USERNAME__
     icon-class: fa fa-2x fa-chrome
 
-  - name: правила проживания
+  - name: проживание
     url-pattern: www.bobryhouses.ru/__USERNAME__
     icon-class: fa fa-2x fa-house-user
 
-  - name: yandex
+  - name: отзывы
     url-pattern: yandex.ru/maps/org/bobry_country_houses/__USERNAME__
     icon-class: fab fa-yandex
     
@@ -176,7 +177,11 @@ social-links:
     url-pattern: '__USERNAME__'
     icon-class: far fa-2x fa-envelope-open
 
-  - name: phone
+  - name: позвонить
     url-scheme: 'tel:'
     url-pattern: '__USERNAME__'
     icon-class: fa fa-2x fa-phone
+
+  - name: забронировать
+    url-pattern: homereserve.ru/__USERNAME__
+    icon-class: fa-solid fa-calendar-days
