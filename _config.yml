@@ -37,11 +37,11 @@ whatsapp: '79214060607'
 #email: 'hello@example.com'
 #messenger: 'myfbchat'
 website: ''
-Правила проживания: 'rules'
-Оставить отзыв: 'yandex'
+rules: 'rules'
+yandex: 'yandex'
 phone: '+79214060607'
 
-social-links-order: [instagram, telegram, vk, whatsapp, website, Правила проживания, Оставить отзыв, phone]
+social-links-order: [instagram, telegram, vk, whatsapp, website, rules, yandex, phone]
 
 # Yaml manifest of supported social links
 # Requirements:
