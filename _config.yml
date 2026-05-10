@@ -1,28 +1,12 @@
-# Theme
 remote_theme: epidrome/cover-card@main
 
-# Title and tag line
 title: 'Бобры. Загородные дома'
 description: 'Подписывайтесь на наши соц сети, чтобы быть в курсе'
 
-# Images
 avatar: 'БОБРЫПНГ.png'
 background: 'background.jpg'
 favicon: 'БОБРЫПНГ.png'
 
-# Theme
-remote_theme: epidrome/cover-card@main
-
-# Title and tag line
-title: 'Бобры. Загородные дома'
-description: 'Подписывайтесь на наши соц сети, чтобы быть в курсе'
-
-# Images
-avatar: 'БОБРЫПНГ.png'
-background: 'background.jpg'
-favicon: 'БОБРЫПНГ.png'
-
-# Online profiles
 instagram: 'bobry_country_houses'
 vk: 'bobryhouses'
 max: 'f9LHodD0cOJPFlIMvgwL6YRxq3bvho5sFw8tnhwZDB45g3SDnXQybzzWfxA'
@@ -37,53 +21,30 @@ book: 'gDleLbdhMC'
 social-links-order: [website, reviews, whatsapp, telegram, vk, max, instagram, living, call, book]
 
 social-links:
-  - name: facebook
-    url-pattern: ://facebook.com__
-    icon-class: fab fa-2x fa-facebook-f
-
-  - name: twitter
-    url-pattern: ://twitter.com__
-
-  - name: linkedin
-    url-pattern: ://linkedin.com__
-
   - name: vk
     url-pattern: ://vk.com__
-
   - name: instagram
     url-pattern: ://instagram.com__
-
   - name: whatsapp
     url-pattern: wa.me/__USERNAME__
-
-  - name: messenger
-    url-pattern: m.me/__USERNAME__
-    icon-class: fab fa-2x fa-facebook-messenger
-
   - name: telegram
     url-pattern: telegram.me/__USERNAME__
-
   - name: website
     url-pattern: www.bobryhouses.ru/__USERNAME__
     icon-class: fab fa-2x fa-chrome
-
   - name: living
     url-pattern: www.bobryhouses.ru/__USERNAME__
     icon-class: fas fa-2x fa-house-user
-
   - name: reviews
     url-pattern: yandex.ru/maps/org/bobry_country_houses/__USERNAME__
     icon-class: fas fa-2x fa-comments
-    
   - name: call
     url-scheme: 'tel:'
     url-pattern: '__USERNAME__'
     icon-class: fas fa-2x fa-phone
-
   - name: book
     url-pattern: homereserve.ru/__USERNAME__
     icon-class: fas fa-2x fa-calendar-alt
-    
   - name: max
     url-pattern: max.ru/u/__USERNAME__
     icon-class: fas fa-2x fa-comment-dots
