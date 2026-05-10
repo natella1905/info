@@ -1,0 +1,321 @@
+:root {
+  --font-display: "Space Grotesk", "Segoe UI", sans-serif;
+  --font-body: "Manrope", "Segoe UI", sans-serif;
+
+  --bg-image: url("../../background.jpg");
+  --bg-position: center center;
+  --bg-overlay-start: rgba(9, 16, 19, 0.72);
+  --bg-overlay-end: rgba(15, 34, 32, 0.64);
+
+  --surface: rgba(20, 33, 35, 0.78);
+  --surface-border: rgba(255, 255, 255, 0.18);
+  --surface-shadow: 0 20px 48px rgba(0, 0, 0, 0.36);
+
+  --text-primary: #f8f6f1;
+  --text-secondary: #d5d0c7;
+  --accent: #ea7a3a;
+  --accent-hover: #d86523;
+  --accent-soft: rgba(234, 122, 58, 0.18);
+  --button-text: #ffffff;
+
+  --chip-bg: rgba(255, 255, 255, 0.08);
+  --chip-border: rgba(255, 255, 255, 0.14);
+
+  --social-bg: rgba(255, 255, 255, 0.06);
+  --social-border: rgba(255, 255, 255, 0.12);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  background: #101a1b;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.bg-layer {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(135deg, var(--bg-overlay-start), var(--bg-overlay-end)),
+    var(--bg-image);
+  background-position: center center, var(--bg-position);
+  background-size: cover;
+}
+
+.bg-layer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.13), transparent 36%),
+    radial-gradient(circle at 82% 84%, rgba(255, 255, 255, 0.1), transparent 30%);
+  mix-blend-mode: soft-light;
+}
+
+.template-shell {
+  width: min(1040px, 100%);
+  border: 1px solid var(--surface-border);
+  border-radius: 26px;
+  backdrop-filter: blur(8px);
+  background: var(--surface);
+  box-shadow: var(--surface-shadow);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.brand-column,
+.links-column {
+  padding: clamp(24px, 5vw, 48px);
+}
+
+.brand-column {
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.brand-logo {
+  width: clamp(72px, 11vw, 98px);
+  aspect-ratio: 1;
+  object-fit: contain;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.09);
+  padding: 8px;
+}
+
+.brand-tagline {
+  margin: 20px 0 10px;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.brand-name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(30px, 4.7vw, 50px);
+  line-height: 1.05;
+}
+
+.brand-description {
+  margin: 16px 0 0;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 48ch;
+}
+
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 28px 0 0;
+}
+
+.chip {
+  border: 1px solid var(--chip-border);
+  background: var(--chip-bg);
+  color: var(--text-primary);
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+}
+
+.action-list {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.action-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  padding: 12px 16px;
+  font-weight: 600;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+}
+
+.action-link.primary {
+  background: var(--accent);
+  color: var(--button-text);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.26);
+}
+
+.action-link.primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+.action-link.secondary {
+  background: var(--accent-soft);
+  color: var(--text-primary);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.action-link.secondary:hover {
+  transform: translateY(-2px);
+}
+
+.links-head {
+  margin-bottom: 18px;
+}
+
+.social-caption {
+  margin: 0;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.social-title {
+  margin: 10px 0 8px;
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3.5vw, 34px);
+}
+
+.social-description {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.social-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 14px;
+  border: 1px solid var(--social-border);
+  background: var(--social-bg);
+  color: var(--text-primary);
+  padding: 12px;
+  transition: transform 0.18s ease, border-color 0.18s ease, background-color 0.18s ease;
+  min-height: 66px;
+}
+
+.social-link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.34);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.icon-wrap {
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  background: rgba(255, 255, 255, 0.14);
+  display: grid;
+  place-items: center;
+  flex: 0 0 42px;
+}
+
+.icon-wrap svg,
+.icon-wrap img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.social-text {
+  min-width: 0;
+}
+
+.social-label {
+  margin: 0;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.social-meta {
+  margin: 3px 0 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.theme-switcher {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.theme-btn {
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  background: transparent;
+  color: var(--text-primary);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.theme-btn.active {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.footer-note {
+  margin: 18px 0 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+@media (max-width: 940px) {
+  .template-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-column {
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+}
+
+@media (max-width: 620px) {
+  body {
+    padding: 12px;
+  }
+
+  .social-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .action-link {
+    width: 100%;
+  }
+}
