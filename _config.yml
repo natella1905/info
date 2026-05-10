@@ -38,12 +38,12 @@ whatsapp: '79214060607'
 #email: 'hello@example.com'
 #messenger: 'myfbchat'
 website: ''
-проживание: 'rules'
-отзывы: '169139949040/reviews'
-позвонить: '+79214060607'
-забронировать: 'gDleLbdhMC'
+"проживание": 'rules'
+"отзывы": '169139949040/reviews'
+"позвонить": '+79214060607'
+"забронировать": 'gDleLbdhMC'
 
-social-links-order: [website, отзывы, whatsapp, telegram, vk, max, instagram, проживание, позвонить, забронировать]
+social-links-order: [website, "отзывы", whatsapp, telegram, vk, max, instagram, "проживание", "позвонить", "забронировать"]
 
 # Yaml manifest of supported social links
 # Requirements:
@@ -165,11 +165,11 @@ social-links:
     url-pattern: www.bobryhouses.ru/__USERNAME__
     icon-class: fa fa-2x fa-chrome
 
-  - name: проживание
+  - name: "проживание"
     url-pattern: www.bobryhouses.ru/__USERNAME__
     icon-class: fa fa-2x fa-house-user
 
-  - name: отзывы
+  - name: "отзывы"
     url-pattern: yandex.ru/maps/org/bobry_country_houses/__USERNAME__
     icon-class: fas fa-2x fa-comments
     
@@ -178,12 +178,12 @@ social-links:
     url-pattern: '__USERNAME__'
     icon-class: far fa-2x fa-envelope-open
 
-  - name: позвонить
+  - name: "позвонить"
     url-scheme: 'tel:'
     url-pattern: '__USERNAME__'
     icon-class: fa fa-2x fa-phone
 
-  - name: забронировать
+  - name: "забронировать"
     url-pattern: homereserve.ru/__USERNAME__
     icon-class: fas fa-2x fa-calendar-alt
 
