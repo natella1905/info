@@ -1,5 +1,11 @@
 remote_theme: epidrome/cover-card@main
 
+# Техническая правка против ошибки "stack level too deep"
+jekyll-optional-front-matter:
+  enabled: true
+collections: []
+paginate: 0
+
 title: 'Бобры. Загородные дома'
 description: 'Подписывайтесь на наши соц сети, чтобы быть в курсе'
 
@@ -46,5 +52,5 @@ social-links:
     url-pattern: homereserve.ru/__USERNAME__
     icon-class: fas fa-2x fa-calendar-alt
   - name: max
-    url-pattern: max.ru/u/__USERNAME__
+    url-pattern: ://vk.com__
     icon-class: fas fa-2x fa-comment-dots
