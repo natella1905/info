@@ -31,6 +31,7 @@ instagram: 'bobry_country_houses'
 #tumblr: 'mytumblr'
 #weibo: 'myweibo'
 vk: 'bobryhouses'
+max: 'f9LHodD0cOJPFlIMvgwL6YRxq3bvho5sFw8tnhwZDB45g3SDnXQybzzWfxA'
 telegram: 'bobryhouses'
 whatsapp: '79214060607'
 #blog_url: 'myblog.blog.com'
@@ -42,7 +43,7 @@ website: ''
 позвонить: '+79214060607'
 забронировать: 'gDleLbdhMC'
 
-social-links-order: [website, отзывы, whatsapp, telegram, vk, instagram, проживание, позвонить, забронировать]
+social-links-order: [website, отзывы, whatsapp, telegram, vk, max, instagram, проживание, позвонить, забронировать]
 
 # Yaml manifest of supported social links
 # Requirements:
@@ -185,3 +186,7 @@ social-links:
   - name: забронировать
     url-pattern: homereserve.ru/__USERNAME__
     icon-class: fas fa-2x fa-calendar-alt
+
+   - name: max
+    url-pattern: max.ru/u/__USERNAME__
+    icon-class: fas fa-2x fa-comment-dots
