@@ -187,6 +187,6 @@ social-links:
     url-pattern: homereserve.ru/__USERNAME__
     icon-class: fas fa-2x fa-calendar-alt
 
-   - name: max
+  - name: max
     url-pattern: max.ru/u/__USERNAME__
     icon-class: fas fa-2x fa-comment-dots
