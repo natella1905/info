@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title id="pageTitle">Digital Card Template</title>
-  <meta name="description" content="Современный шаблон страницы-визитки с настраиваемыми соцсетями, темами и иконками.">
+  <title id="pageTitle">Бобры. Загородные дома</title>
+  <meta name="description" content="Страница мультиссылок для быстрой связи и бронирования домов Бобры.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -12,28 +12,17 @@
 </head>
 <body>
   <div class="bg-layer" aria-hidden="true"></div>
+  <div class="ambient-blur" aria-hidden="true"></div>
 
-  <main class="template-shell">
-    <section class="brand-column">
-      <img id="logoImage" class="brand-logo" src="logoweb.png" alt="Логотип">
-      <p id="brandTagline" class="brand-tagline"></p>
+  <main class="page-shell">
+    <section class="profile-card">
+      <img id="avatarImage" class="profile-avatar" src="avatar.jpg" alt="Аватар Бобры">
       <h1 id="brandName" class="brand-name"></h1>
+      <p id="brandTagline" class="brand-tagline"></p>
       <p id="brandDescription" class="brand-description"></p>
 
-      <div id="infoChips" class="chip-list"></div>
-      <div id="primaryActions" class="action-list"></div>
-    </section>
-
-    <section class="links-column">
-      <header class="links-head">
-        <p id="socialCaption" class="social-caption"></p>
-        <h2 id="socialTitle" class="social-title"></h2>
-        <p id="socialDescription" class="social-description"></p>
-      </header>
-
-      <div id="socialLinks" class="social-grid"></div>
-      <div id="themeSwitcher" class="theme-switcher"></div>
-      <p id="footerNote" class="footer-note"></p>
+      <div id="primaryActions" class="link-stack link-stack--primary"></div>
+      <div id="socialLinks" class="link-stack"></div>
     </section>
   </main>
 

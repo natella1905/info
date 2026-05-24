@@ -7,6 +7,13 @@
   const root = document.documentElement;
 
   const icons = {
+    booking: `
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <rect x="3.2" y="4.5" width="17.6" height="16.3" rx="3" stroke="currentColor" stroke-width="1.8"></rect>
+        <path d="M7 3.5v3M17 3.5v3M3.2 9.5h17.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+        <circle cx="12" cy="14.2" r="2.1" fill="currentColor"></circle>
+      </svg>
+    `,
     instagram: `
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"></rect>
@@ -46,6 +53,18 @@
         <path d="M7.8 4.8h2.1c.5 0 .9.4 1 .9l.4 2.4c.1.5-.2 1-.7 1.2l-1.4.6a13 13 0 0 0 5 5l.6-1.4c.2-.5.7-.8 1.2-.7l2.4.4c.5.1.9.5.9 1v2.1c0 .6-.5 1.1-1.1 1.1C10 18.8 5.2 14 5.2 5.9c0-.6.5-1.1 1.1-1.1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path>
       </svg>
     `,
+    rules: `
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M6.8 4h10.4c.9 0 1.6.7 1.6 1.6v12.8c0 .9-.7 1.6-1.6 1.6H6.8c-.9 0-1.6-.7-1.6-1.6V5.6C5.2 4.7 5.9 4 6.8 4Z" stroke="currentColor" stroke-width="1.8"></path>
+        <path d="m8.4 12 2.1 2.1 5.1-5.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    `,
+    max: `
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <rect x="2.7" y="2.7" width="18.6" height="18.6" rx="5.2" stroke="currentColor" stroke-width="1.8"></rect>
+        <path d="M6.9 16.9V7.3L12 12.3l5.1-5v9.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    `,
     globe: `
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"></circle>
@@ -54,30 +73,26 @@
     `
   };
 
-  renderStaticContent(config);
+  setTheme((config.theme && config.theme.activePreset) || "forest-sand", config.theme || {});
   applyBackground(config.site?.background);
-  renderChips(config.site?.infoChips || []);
-  renderActions(config.primaryActions || []);
-  renderSocials(config.socials || [], icons);
-  renderThemeSwitcher(config.theme || {});
-  setTheme((config.theme && config.theme.activePreset) || "", config.theme || {});
+  renderStaticContent(config.site || {});
+  renderLinks("primaryActions", config.primaryActions || [], icons);
+  renderLinks("socialLinks", config.socials || [], icons);
 
-  function renderStaticContent(data) {
-    setText("pageTitle", data.site?.pageTitle || "Digital Card Template", true);
-    setText("brandTagline", data.site?.tagline || "");
-    setText("brandName", data.site?.name || "");
-    setText("brandDescription", data.site?.description || "");
-    setText("socialCaption", data.sections?.socialCaption || "");
-    setText("socialTitle", data.sections?.socialTitle || "");
-    setText("socialDescription", data.sections?.socialDescription || "");
-    setText("footerNote", data.site?.footerNote || "");
+  function renderStaticContent(site) {
+    setText("pageTitle", site.pageTitle || "Бобры. Загородные дома", true);
+    setText("brandName", site.name || "");
+    setText("brandTagline", site.tagline || "");
+    setText("brandDescription", site.description || "");
 
-    const logoEl = document.getElementById("logoImage");
-    if (!logoEl) return;
-    if (data.site?.logo?.src) {
-      logoEl.src = data.site.logo.src;
+    const avatarEl = document.getElementById("avatarImage");
+    if (!avatarEl) {
+      return;
     }
-    logoEl.alt = data.site?.logo?.alt || "Логотип";
+    if (site.avatar?.src) {
+      avatarEl.src = site.avatar.src;
+    }
+    avatarEl.alt = site.avatar?.alt || "Аватар";
   }
 
   function applyBackground(background) {
@@ -90,38 +105,12 @@
     }
   }
 
-  function renderChips(chips) {
-    const container = document.getElementById("infoChips");
-    if (!container) return;
-    container.innerHTML = "";
-    chips.forEach((chip) => {
-      const span = document.createElement("span");
-      span.className = "chip";
-      span.textContent = chip;
-      container.appendChild(span);
-    });
-  }
-
-  function renderActions(actions) {
-    const container = document.getElementById("primaryActions");
-    if (!container) return;
-    container.innerHTML = "";
-    actions.forEach((action) => {
-      const link = document.createElement("a");
-      link.className = `action-link ${action.style === "secondary" ? "secondary" : "primary"}`;
-      link.href = action.href || "#";
-      link.textContent = action.label || "Ссылка";
-      applyTarget(link, action.href);
-      container.appendChild(link);
-    });
-  }
-
-  function renderSocials(socials, iconMap) {
-    const container = document.getElementById("socialLinks");
+  function renderLinks(containerId, links, iconMap) {
+    const container = document.getElementById(containerId);
     if (!container) return;
     container.innerHTML = "";
 
-    socials.forEach((social) => {
+    links.forEach((social) => {
       const link = document.createElement("a");
       link.className = "social-link";
       link.href = social.href || "#";
@@ -140,34 +129,17 @@
 
       const meta = document.createElement("p");
       meta.className = "social-meta";
-      meta.textContent = social.meta || social.href || "";
+      meta.textContent = social.meta || "";
+      const hasMeta = Boolean(meta.textContent);
 
       text.appendChild(label);
-      text.appendChild(meta);
+      if (hasMeta) {
+        text.appendChild(meta);
+      }
 
       link.appendChild(iconWrap);
       link.appendChild(text);
       container.appendChild(link);
-    });
-  }
-
-  function renderThemeSwitcher(theme) {
-    const container = document.getElementById("themeSwitcher");
-    if (!container) return;
-    container.innerHTML = "";
-
-    if (!theme.allowSwitcher || !theme.presets) {
-      return;
-    }
-
-    Object.entries(theme.presets).forEach(([presetKey, preset]) => {
-      const btn = document.createElement("button");
-      btn.type = "button";
-      btn.className = "theme-btn";
-      btn.dataset.preset = presetKey;
-      btn.textContent = preset.label || presetKey;
-      btn.addEventListener("click", () => setTheme(presetKey, theme));
-      container.appendChild(btn);
     });
   }
 
@@ -180,11 +152,6 @@
 
     Object.entries(selected.colors).forEach(([name, value]) => {
       root.style.setProperty(`--${name}`, value);
-    });
-
-    const buttons = document.querySelectorAll(".theme-btn");
-    buttons.forEach((btn) => {
-      btn.classList.toggle("active", btn.dataset.preset === selectedKey);
     });
   }
 
