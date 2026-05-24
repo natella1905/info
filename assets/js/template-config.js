@@ -120,7 +120,7 @@ window.AppTemplateConfig = {
     {
       label: "Правила проживания",
       meta: "Правила проживания",
-      href: "https://bobryhouses.ru/pravila",
+      href: "https://www.xn----7sbeal2cnet4i.xn--p1ai/rules.html",
       icon: { type: "platform", name: "rules" }
     },
     {
