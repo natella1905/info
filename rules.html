@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Правила проживания — Bobry Country Houses</title>
+<meta name="description" content="Правила проживания, заезд/выезд, баня, мангальные зоны, аренда инвентаря, контакты и условия возврата для Bobry Country Houses." />
+
+<!-- Minimal, embedded styles -->
+<style>
+  :root{
+    --bg:#0b0f14; --card:#111722; --muted:#6b7a90; --text:#e8eef7; --accent:#79c4ff; --accent-2:#93ffb5;
+    --ring: rgba(121,196,255,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:radial-gradient(1200px 600px at 80% -10%,#162033 0%,#0e141f 40%, var(--bg) 100%);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Noto Sans",sans-serif;line-height:1.55}
+  a{color:var(--accent)}
+  .wrap{max-width:980px;margin:0 auto;padding:20px}
+  header{position:sticky;top:0;z-index:10;background:linear-gradient(180deg,rgba(11,15,20,.9),rgba(11,15,20,.65) 70%,rgba(11,15,20,0));backdrop-filter: blur(6px)}
+  .hero{padding:12px 20px 10px}
+  .title{font-size:clamp(22px,4vw,36px);margin:6px 0 2px;letter-spacing:.2px}
+  .subtitle{color:var(--muted);font-size:clamp(13px,2vw,16px);margin:0 0 8px}
+  .tabs{display:flex;gap:8px;overflow:auto;padding:10px 20px 14px;border-top:1px solid #1b2533;border-bottom:1px solid #1b2533}
+  .tab{white-space:nowrap;border:1px solid #253247;background:#0f1521;color:#bcd1ee;border-radius:999px;padding:8px 14px;font-weight:600;font-size:14px;cursor:pointer;transition:.2s}
+  .tab[aria-selected="true"]{background:linear-gradient(90deg,rgba(121,196,255,.18),rgba(147,255,181,.18));border-color:#2f405a;box-shadow:0 0 0 3px var(--ring);color:#fff}
+  .grid{display:grid;gap:16px;margin-top:16px}
+  @media(min-width:800px){.grid{grid-template-columns:1.3fr .7fr}}
+  .card{background:linear-gradient(180deg,#101727,#0d1422);border:1px solid #1f2a3b;border-radius:16px;padding:16px;box-shadow:0 6px 30px rgba(0,0,0,.25)}
+  .card h2,.card h3{margin:.2rem 0 .6rem}
+  .muted{color:var(--muted)}
+  .kv{display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:15px}
+  .kv div{background:#0d1421;border:1px solid #1c2636;border-radius:12px;padding:10px}
+  .kv b{display:block;font-size:12px;color:#9cb3d4;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+  .list{margin:0;padding-left:18px}
+  .list li{margin:6px 0}
+  /* accordion */
+  .acc{border:1px solid #1f2a3b;border-radius:14px;overflow:hidden}
+  .acc .i{border-bottom:1px solid #1a2434}
+  .acc .i:last-child{border-bottom:0}
+  .acc button{width:100%;text-align:left;background:#0f1624;color:#dbe7fb;padding:14px 16px;font-weight:700;letter-spacing:.2px;border:0;cursor:pointer;display:flex;align-items:center;justify-content:space-between}
+  .acc button:focus-visible{outline:3px solid var(--ring)}
+  .acc .content{display:grid;grid-template-rows:0fr;transition:grid-template-rows .28s ease;}
+  .acc .content > div{overflow:hidden}
+  .acc .i[aria-expanded="true"] .content{grid-template-rows:1fr}
+  .badge{display:inline-flex;gap:6px;align-items:center;background:#0e1b2a;border:1px solid #203148;border-radius:999px;padding:6px 10px;font-size:12px;color:#cfe6ff;margin-right:8px}
+  .badge small{opacity:.8}
+  .note{font-size:13px;color:#9bb2d3}
+  footer{color:#8ea7c7;font-size:13px;margin:28px 0 10px;text-align:center}
+  .callout{border-left:3px solid var(--accent);padding:10px 12px;background:#0f1624;border-radius:10px}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap hero">
+    <a class="badge" href="index.html">
+  <span>🏡</span>
+  <small>Bobry Country Houses</small>
+</a>
+    <h1 class="title">Правила проживания</h1>
+    <p class="subtitle">Удобно с телефона: вкладки по домам, быстрые ответы и контакты.</p>
+  </div>
+  <div class="tabs" role="tablist" aria-label="Выбор домика">
+    <button class="tab" role="tab" aria-selected="true" data-tab="all">Все правила</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="dom1-3">Дом 1–3</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="podvorye">Подворье</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="logovo">Логово Бобра</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="grid">
+    <!-- Left column -->
+    <div class="card" id="pane-all" role="tabpanel" aria-labelledby="Все правила">
+      <h2>Общие правила</h2>
+      <ol class="list">
+        <li><b>Расчётный час:</b> в 12:00 и 13:00 — зависит от объекта.<br>
+          <span class="note">Дом 1, 2, 3 — расчётный час 12:00. Подворье и Логово Бобра — 13:00.</span>
+        </li>
+        <li><b>Заезд/выезд:</b> Дом 1–3 — заезд с 14:00, выезд до 12:00 следующего дня. Подворье и Логово Бобра — заезд с 15:00, выезд до 13:00.</li>
+        <li><b>Поздний выезд:</b> 400 ₽/час до 16:00, ½ суток до 21:00, после 21:00 — стоимость суток. <span class="note">С пятницы по воскресенье — бонус: поздний выезд до 17:00 (Домики 1–3) и до 18:00 в Подворье при отсутствии следующих гостей.</span></li>
+        <li><b>Бесконтактное заселение:</b> возможно.</li>
+        <li><b>Курение:</b> строго запрещено в доме. Разрешено на террасе.</li>
+        <li><b>Животные:</b> по согласованию; доплата <b>500 ₽/сутки</b>.</li>
+        <li><b>Гости до 18 лет:</b> аренда только в присутствии родителей.</li>
+        <li><b>Мебель/посуда:</b> не переставлять мебель; не переносить посуду между домиками; не оставлять посуду на территории.</li>
+        <li><b>Безопасность:</b> при выходе закрывать краны, перекрывать газовый баллон, выключать свет и электроприборы.</li>
+        <li><b>Камин/печь:</b> пользоваться только при нахождении в доме. <span class="note">Дрова — бесплатно по запросу.</span></li>
+        <li><b>Быт и досуг:</b> организуются гостями самостоятельно.</li>
+        <li><b>Мангальные зоны:</b>
+          <ul class="list">
+            <li>Логово Бобра — <b>в беседке</b> (шампура, уголь, розжиг включены).</li>
+            <li>Дом 1, 2, 3 — <b>около террас</b>. Казан/коптильня — по запросу, за доп. плату.</li>
+            <li>Подворье — <b>на отдельной территории</b> вместе с беседкой и зоной отдыха у воды.</li>
+          </ul>
+        </li>
+        <li><b>Беседка Логово Бобра:</b> при отсутствии гостей возможна по согласованию для гостей других домиков.</li>
+        <li><b>Баня/чан:</b> баня — за доп. плату. Чан топится отдельно за доп. плату. Веники приобретаются отдельно.</li>
+        <li><b>Водный инвентарь:</b> лодки, сапы, удочки — за доп. плату; выдаются спасжилеты. Ответственные: Геннадий и Дмитрий (контакты ниже).</li>
+        <li><b>Детские зоны:</b> есть площадка и батут. Родители несут ответственность за безопасность детей.</li>
+        <li><b>Связь и вопросы:</b> WhatsApp: <a href="https://wa.me/79214060607" target="_blank" rel="noopener">8 (921) 406-06-07</a> или управляющие на месте.</li>
+        <li><b>Чистота при выезде:</b> гости самостоятельно моют посуду и вывозят мусор <i>или</i> оплачивают услуги: <b>500 ₽/услуга</b>.</li>
+        <li><b>Депозит:</b> возвратный залог 3 000 ₽ принимается наличными или переводом в день заезда; возвращаем после уборки тем же способом.</li>
+      </ol>
+
+      <div class="acc" style="margin-top:16px">
+        <div class="i" aria-expanded="false">
+          <button type="button">Условия отмены бронирования <span>➜</span></button>
+          <div class="content"><div>
+            <p class="callout">Отмена за <b>3 суток</b> до заезда — <b>100% возврат</b> через платформу бронирования.</p>
+            <p class="note">За нарушение правил эксплуатации дома договор посуточной аренды может быть расторгнут. Штраф — <b>залоговая стоимость аренды</b>.</p>
+          </div></div>
+        </div>
+        <div class="i" aria-expanded="false">
+          <button type="button">Частые вопросы (FAQ) <span>➜</span></button>
+          <div class="content"><div>
+            <p><b>Можно с питомцами?</b> Да, по согласованию, 500 ₽/сутки.</p>
+            <p><b>Где жарить шашлык?</b> См. блок «Мангальные зоны» выше.</p>
+            <p><b>Поздний выезд?</b> Да, согласуем на месте; тарификация см. п. 3.</p>
+            <p><b>Есть бесконтактное заселение?</b> Да.</p>
+          </div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right column -->
+    <aside class="card">
+      <h3>Быстрые параметры по домам</h3>
+
+      <!-- Дом 1–3 -->
+      <div class="kv tag-dom1-3">
+        <div><b>Дом 1–3</b><span>Заезд с 14:00</span></div>
+        <div><b>Выезд</b><span>до 12:00</span></div>
+        <div><b>Мангальная зона</b><span>около террасы</span></div>
+        <div><b>Расчётный час</b><span>12:00</span></div>
+      </div>
+
+      <!-- Подворье -->
+      <div class="kv tag-podvorye" style="margin-top:10px">
+        <div><b>Подворье</b><span>Заезд с 15:00</span></div>
+        <div><b>Выезд</b><span>до 13:00</span></div>
+        <div><b>Мангальная зона</b><span>около дома (единый комплекс)</span></div>
+        <div><b>Расчётный час</b><span>13:00</span></div>
+      </div>
+
+      <!-- Логово Бобра -->
+      <div class="kv tag-logovo" style="margin-top:10px">
+        <div><b>Логово Бобра</b><span>Заезд с 15:00</span></div>
+        <div><b>Выезд</b><span>до 13:00</span></div>
+        <div><b>Мангальная зона</b><span>в беседке</span></div>
+        <div><b>Расчётный час</b><span>13:00</span></div>
+      </div>
+
+      <h3 style="margin-top:18px">Контакты</h3>
+      <p class="muted">Бытовые вопросы, аренда бани, купели, лодок:</p>
+      <p><b>Геннадий</b>: <a href="tel:+79217882679">8 921 788-26-79</a></p>
+      <p><b>Дмитрий</b>: <a href="tel:+79117687585">8 911 768-75-85</a></p>
+      <p><b>Наталья</b> (Подворье): <a href="tel:+79214060607">8 921 406-06-07</a></p>
+      <p class="note">Основной WhatsApp: <a href="https://wa.me/79214060607" target="_blank" rel="noopener">8 (921) 406-06-07</a></p>
+    </aside>
+  </section>
+
+  <!-- per-tab panes (compact summaries for mobile switching) -->
+  <section id="pane-dom1-3" class="card" hidden>
+    <h2>Дом 1–3 — кратко</h2>
+    <ul class="list">
+      <li>Заезд с <b>14:00</b>, выезд до <b>12:00</b>, расчётный час <b>12:00</b>.</li>
+      <li>Мангальная зона — <b>около террасы</b>.</li>
+      <li>Остальные правила — см. «Все правила» выше.</li>
+    </ul>
+  </section>
+
+  <section id="pane-podvorye" class="card" hidden>
+    <h2>Подворье — кратко</h2>
+    <ul class="list">
+      <li>Заезд с <b>15:00</b>, выезд до <b>13:00</b>, расчётный час <b>13:00</b>.</li>
+      <li>Мангальная зона — <b>около дома (единый комплекс)</b>.</li>
+      <li>Остальные правила — см. «Все правила» выше.</li>
+    </ul>
+  </section>
+
+  <section id="pane-logovo" class="card" hidden>
+    <h2>Логово Бобра — кратко</h2>
+    <ul class="list">
+      <li>Заезд с <b>15:00</b>, выезд до <b>13:00</b>, расчётный час <b>13:00</b>.</li>
+      <li>Мангальная зона — <b>в беседке</b>. При отсутствии гостей — возможно использование гостями других домиков по согласованию.</li>
+      <li>Остальные правила — см. «Все правила» выше.</li>
+    </ul>
+  </section>
+
+  <footer>© Bobry Country Houses</footer>
+</main>
+
+<!-- Minimal JS: tabs + accordion -->
+<script>
+  // Tabs
+  const tabs = document.querySelectorAll('.tab');
+  const panes = {
+    all: document.getElementById('pane-all'),
+    'dom1-3': document.getElementById('pane-dom1-3'),
+    podvorye: document.getElementById('pane-podvorye'),
+    logovo: document.getElementById('pane-logovo')
+  };
+  function selectTab(key){
+    tabs.forEach(t => t.setAttribute('aria-selected', String(t.dataset.tab===key)));
+    Object.entries(panes).forEach(([k,el]) => { el.hidden = (k!==key); });
+    if(key==='all') panes.all.hidden=false;
+    // Optional focus for accessibility on mobile
+    panes[key].scrollIntoView({behavior:'smooth', block:'start'});
+  }
+  tabs.forEach(t => t.addEventListener('click', ()=> selectTab(t.dataset.tab)));
+
+  // Accordion
+  document.querySelectorAll('.acc .i > button').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const item = btn.parentElement;
+      const expanded = item.getAttribute('aria-expanded') === 'true';
+      item.setAttribute('aria-expanded', String(!expanded));
+    });
+  });
+
+  // Default to "Все правила"
+  selectTab('all');
+</script>
+</body>
+</html>
